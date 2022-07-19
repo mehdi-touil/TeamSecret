@@ -1,0 +1,13 @@
+<%- include('header') -%>
+			<form action="/post" method="post">
+                <h1>Create Message</h1>
+				<section>
+					<label for="title">Title</label>
+					<input id="title" name="title" type="text"  required >
+				</section>
+				<section>
+					<label for="content">Message:</label>
+					<input id="content" name="content" type="text" autocomplete="current-password" required>
+				</section>
+				<button type="submit">Submit Message</button>
+			</form>			

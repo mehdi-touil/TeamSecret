@@ -1,0 +1,29 @@
+<%- include('header') -%>
+<form action="/signup" method="post">
+  <h1>Signup</h1>
+  <ul class="signuperrors">
+  <% if(locals.errors){ %>
+  <% errors.forEach(function(error){ %>
+  <li><%= error.msg %></li>
+  <% }) %>
+  <% }%>
+</ul>
+
+  <section>
+    <label for="username">Username:</label>
+    <input id="username" name="username" type="text" required>
+  </section>
+  <section>
+    <label for="fullname">Full Name</label>
+    <input id="fullname" name="fullname" type="text" required>
+  </section>
+  <section>
+    <label for="password">Password:</label>
+    <input id="password" name="password" type="password" required>
+  </section>
+  <section>
+    <label for="cpassword">Confirm Password:</label>
+    <input id="cpassword" name="cpassword" type="password" required>
+  </section>
+  <button type="submit">Signup</button>
+</form>

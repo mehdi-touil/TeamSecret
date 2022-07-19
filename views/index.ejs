@@ -1,0 +1,37 @@
+<%- include('header',{user: locals.user}) -%>
+<div class="postscontainer">
+  <% posts.forEach(function(post){ %>
+  <div class="postcontainer">
+    <div class="cover">
+      <img src=<%= "https://robohash.org/"+ post.id  %> alt="">
+    </div>
+    <div class="text">
+      <div class="title">
+        <div><%= post.title %></div>
+        <% if (user && user.isadmin==true) { %>
+        <a href=/<%=post.id%>/delete><i class="fa-solid fa-trash"></i></a>
+        <% } %>
+      </div>
+      <div class="content">
+        <%= post.content %>
+      </div>
+      <div class="postfooter">
+        <div class="fullname">Posted by:
+          <% if(user && user.isMember == true) { %>
+          <strong><%= post.user.fullname %></strong>
+        </div>
+
+        <div class="timestamp"><%= post.timestamp %></div>
+        <% } else{ %>
+        <strong>Anonymous</strong>
+      </div>
+
+      <div class="timestamp">N/A</div>
+      <% }  %>
+    </div>
+  </div>
+</div>
+<% }); %>
+
+</div>
+<%- include('footer') -%>

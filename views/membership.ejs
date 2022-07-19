@@ -1,0 +1,13 @@
+<%- include('header') -%>
+			<form action="/membership" method="post">
+                <h1>Become a member !</h1>
+                <% if (locals.error) { %>
+                    <span id="error" > <%= locals.error %> </span>
+                  <% } %>
+                  
+				<section>
+					<label for="apass">Enter the MemberShip Passcode: </label>
+					<input id="memberpass" name="memberpass" type="password"  required >
+				</section>
+				<button type="submit">Submit Membership</button>
+			</form>			

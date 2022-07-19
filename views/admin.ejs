@@ -1,0 +1,12 @@
+<%- include('header') -%>
+<form action="/admin" method="post">
+  <h1>Become an admin !</h1>
+  <% if (locals.error) { %>
+  <span id="error"> <%= locals.error %> </span>
+  <% } %>
+  <section>
+    <label for="adminpass">Enter the Admin Passcode: </label>
+    <input id="adminpass" name="adminpass" type="password" required>
+  </section>
+  <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,231 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+footer,
+.header {
+  height: 10%;
+  width: 100%;
+  border-bottom: 3px solid rgb(45, 45, 45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Oswald", sans-serif;
+}
+footer {
+  color: black;
+  border-top: 3px solid rgb(45, 45, 45);
+  font-size: 1.1rem;
+  font-weight: 600;
+  height: 8%;
+}
+footer a {
+  color: rebeccapurple;
+}
+.logo {
+  width: 10%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo img {
+  max-width: 10vh;
+}
+.buttons {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.buttons a {
+  text-decoration: none;
+  width: 20%;
+  background: grey;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* font-size: 2rem; */
+  font-size: calc(1.1rem + 0.5vw);
+  color: black;
+  box-shadow: 6px 6px 22px 6px rgba(110, 110, 110, 1);
+  -webkit-box-shadow: 6px 6px 22px 6px rgba(110, 110, 110, 1);
+  -moz-box-shadow: 6px 6px 22px 6px rgba(110, 110, 110, 1);
+  margin: 5px;
+  transition: transform 0.8s ease;
+  text-align: center;
+}
+.buttons a:hover {
+  transform: scale(0.9);
+}
+/**********Posts****/
+.postscontainer {
+  width: 100%;
+  min-height: 100%;
+  background-color: antiquewhite;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+.postcontainer {
+  height: 40vh;
+  width: 80%;
+  border-radius: 40px;
+  background-color: gainsboro;
+  display: flex;
+  overflow: hidden;
+  margin: 10px;
+}
+.cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 100%;
+  background-color: rgb(66, 66, 67);
+}
+.cover img {
+  height: auto;
+  /* width: 100%; */
+  max-width: 120%;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  width: 70%;
+  height: 100%;
+  overflow-x: scroll;
+}
+.title {
+  width: 80%;
+  font-size: 2rem;
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.title a {
+  position: absolute;
+  right: 0;
+}
+.title a i {
+  max-width: 100%;
+}
+.content {
+  text-align: center;
+  font-size: 1.1rem;
+}
+.postfooter {
+  border-top: 3px solid rgb(161, 157, 157);
+  width: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 10px;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.05rem;
+}
+
+/*********Form****/
+form {
+  margin: 0 auto 2em auto;
+  padding: 1.5em 4em;
+  background-color: azure;
+  box-shadow: 0 0 3px 3px azure;
+  border-radius: 0.5em;
+}
+form section {
+  display: flex;
+  flex-direction: column;
+  margin: 0.25em 0 0.5em 0;
+}
+form section label {
+  margin: 0.5em 0;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+form section input {
+  background-color: rgba(138, 125, 125, 0.36);
+  height: 35px;
+  border: none;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+form button {
+  margin-top: 0.75em;
+  border: none;
+  border-radius: 7px;
+  height: 40px;
+  padding: 0 1.5em;
+  color: white;
+  background-color: #463546;
+  cursor: pointer;
+  transition: 250ms;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+form h1 {
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 10px;
+}
+.signuperrors {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.1rem;
+  list-style-type: circle;
+}
+@media (max-width: 1200px) {
+  .buttons {
+    width: 80%;
+    height: 80%;
+  }
+  .buttons a {
+    width: 30%;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 1200px) {
+  .buttons a {
+    font-size: 1.3rem;
+    height: 80%;
+  }
+}
+@media (max-width: 700px) {
+  .buttons {
+    width: 80%;
+    height: 90%;
+  }
+  .buttons a {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 600px) {
+  .buttons a {
+    font-size: 4vw;
+    height: 80%;
+  }
+  .buttons {
+    height: 99%;
+  }
+  .header {
+    height: 12%;
+  }
+  .postcontainer {
+    width: 95%;
+  }
+}

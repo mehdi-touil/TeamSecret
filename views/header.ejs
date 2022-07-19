@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TeamSecret</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://kit.fontawesome.com/3ce668455b.js" crossorigin="anonymous" defer></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <img src="/images/logo.png" alt="" />
+      </div>
+      <div class="buttons">
+        <% if (!locals.user) { %>
+          <a href="/login" >Login</a>
+          <a  href="/signup">Signup</a>
+        <% } %>
+        
+        <% if (locals.user) { %>
+          <a href="/logout" >Logout</a>
+          <a href="/post">Create Message</a>
+          <% if (locals.user.isMember == false) { %>
+          <a href="/membership">Become Member</a>
+          <% } else {%>
+            <% if (locals.user.isadmin == false) { %>
+              <a>Hi,Member</a>
+            <% }  %>
+            <% } %>
+
+          <% if (locals.user.isadmin == false) { %>
+            <a href="/admin">Become Admin</a>
+            <% } else { %>
+              <a>Hi, Admin</a>
+              <% } %>
+
+        <% } %>
+      </div>
+    </div>
+  </body>
+</html>
